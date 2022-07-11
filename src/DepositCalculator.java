@@ -5,12 +5,14 @@ public class DepositCalculator {
         double pay = a * Math.pow((1 + y / 12), 12 * d);
         return rnd(pay, 2);
     }
+
     double calculateSimplePercent(double doubleAmount, double yearRate, int depositPeriod) {
         return rnd(doubleAmount + doubleAmount * yearRate * depositPeriod, 2);
     }
+
     double rnd(double value, int place) {
-          double scale = Math.pow(10, place);
-          return Math.round(value * scale) / scale;
+        double scale = Math.pow(10, place);
+        return Math.round(value * scale) / scale;
     }
 
     void depositCalculation() {
